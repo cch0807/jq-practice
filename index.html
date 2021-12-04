@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Alert창 만들기 -->
+
+  <div class="alert-box" id="al1">
+    <p id="ment">alert</p>
+    <button id="close"> X</button>
+  </div>
+
+  <button onclick="alf1('아이디틀림')">버튼1</button>
+  <button onclick="alf1('비밀번호틀림')">버튼2</button>
+
+
+  <!-- JS -->
+  <script>
+
+    document.getElementById('close').addEventListener('click', function() {
+      document.getElementById('al1').style.display ='none';
+    });
+
+
+
+
+    function alf1(ps) {
+    document.getElementById('al1').style.display = 'block';
+    document.getElementById('ment').innerHTML = ps;
+    }
+
+
+    function alc() {
+      document.getElementById('al1').style.display = 'none';
+    }
+
+    
+  </script>
+</body>
+
+</html>
