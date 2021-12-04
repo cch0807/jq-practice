@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="kr">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-  <!-- Alert창 만들기 -->
+  <h4 id="test" class="greeting">안녕하세요</h4>
+  <h4 id="test" class="greeting">안녕하세요</h4>
+  <h4 id="test" class="greeting">안녕하세요</h4>
+  
+  <button class="btn">버튼1</button>
+  <button class="btn">버튼2</button>
+  <button class="btn">버튼3</button>
 
-  <div class="alert-box" id="al1">
-    <p id="ment">alert</p>
-    <button id="close"> X</button>
-  </div>
-
-  <button onclick="alf1('아이디틀림')">버튼1</button>
-  <button onclick="alf1('비밀번호틀림')">버튼2</button>
-
-
-  <!-- JS -->
   <script>
 
-    document.getElementById('close').addEventListener('click', function() {
-      document.getElementById('al1').style.display ='none';
-    });
+    $('.btn').on('click', function() {
+      $('.greeting').slideDown();
+    })
+
+    document.getElementsByClassName('btn')[0].addEventListener('click', function() {
+      document.getElementsByClassName('greeting')[0].style.display= 'none';
+    })
 
 
 
 
-    function alf1(ps) {
-    document.getElementById('al1').style.display = 'block';
-    document.getElementById('ment').innerHTML = ps;
-    }
+    // document.getElementsByClassName('btn')[0].addEventListener()
+    // document.getElementsByClassName('btn')[1].addEventListener()
+    // document.getElementsByClassName('btn')[2].addEventListener()
+
+    // $('.btn').on('click', function() {
+      
+    // });
+    // $('#test').text('안녕');
+    // $('#test').html('안녕');
+    // $('#test').css('color', 'red');
+    // $('#test').addClass('yellow-bg');
+    // $('.greeting').html('안녕');
+    // $('.greeting').eq(0).html('안녕');
+    // $('.greeting').eq(2).html('안녕');
 
 
-    function alc() {
-      document.getElementById('al1').style.display = 'none';
-    }
-
-    
   </script>
-</body>
 
+
+
+
+
+</body>
 </html>
