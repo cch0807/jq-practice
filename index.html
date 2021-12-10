@@ -56,8 +56,8 @@
   </div>
 
   <div class="main-container">
-  <div class="nav-menu">
-    <h4 style="margin: 0;">Shirts Studio</h4>
+  <div class="nav-menu ">
+    <h4 style="margin: 0;" class="large-logo">Shirts Studio</h4>
     <a id="nav-sub-btn" type="button">Products</a>
 
   </div>
@@ -67,6 +67,19 @@
     <li class="list-group-item">Inner</li>
     <li class="list-group-item">Shirts</li>
   </ul>
+
+  <script>
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() > 50) {
+        $('.nav-menu').addClass('nav-black');
+        $('.nav-menu h4').addClass('small-logo');
+      }
+      if ($(window).scrollTop() <= 50) {
+        $('.nav-menu').removeClass('nav-black');
+        $('.nav-menu h4').removeClass('small-logo');
+      }
+    });
+  </script>
 
   <div class="jumbotron main-background">
     <h1 class="display-4">Shirts Studio</h1>
@@ -84,7 +97,7 @@
 
 
   <h4 class="my-4 text">showcase</h4>
-  <div style="overflow: hidden;">
+  <div style="overflow: hidden; position: relative;">
     <div class="slide-container">
       <div class="slide-box">
         <img src="img2.jpg">
@@ -96,13 +109,59 @@
         <img src="img1.jpg" >
       </div>
     </div>
+    <button class="slide-be">BEFORE</button>
+    <button class="slide-next">NEXT</button>
   </div>
   <button class="slide-1">1</button>
   <button class="slide-2">2</button>
   <button class="slide-3">3</button>
-</div>
+  <div class="container mt-5">
+    <ul class="list">
+      <li class="tab-button">Products</li>
+      <li class="tab-button active">Information</li>
+      <li class="tab-button">Shipping</li>
+    </ul>
+
+    <div class="tab-content">
+      <p>상품설명입니다. Product</p>
+    </div>
+    <div class="tab-content show">
+      <p>상품정보입니다. Info</p>
+    </div>
+    <div class="tab-content">
+      <p>배송정보입니다. Shipping</p>
+    </div>
+    </div>
+    <div>
+      <img src="22.jpg" alt="">
+    </div>
+    </div>
+
+    <script src="tab.js">
+      
+    </script>
+
 
   <script>
+    var pics = 1
+    $('.slide-next').click(function() {
+      $('.slide-container').css('transform', 'translateX(-'+pics+'00vw)');
+      if (pics < 2) {
+        pics += 1;
+      };
+
+    });
+    // 알고리즘 같이 고민하기 
+    $('.slide-be').click(function() {
+      $('.slide-container').css('transform', 'translateX(-'+(pics-2)+'00vw)');
+      if (pics > 1) {
+        pics -= 1;
+      };
+
+
+    });
+
+
 
        $('.slide-1').click(function(){
        $('.slide-container').css('transform', 'translateX(0vw)');
@@ -110,10 +169,12 @@
 
     $('.slide-2').click(function(){
       $('.slide-container').css('transform', 'translateX(-100vw)');
+      pics += 1;
     });
 
     $('.slide-3').click(function(){
       $('.slide-container').css('transform', 'translateX(-200vw)');
+      pics += 1;
     });
 
 
@@ -140,7 +201,7 @@
 
   <script>
     var emailal = $('email-check');
-    // var 은 범위가 function 재할당 재선언 가능
+    // var 은 재할당 재선언 가능 범위가 function
     // let은 재선언이 불가능한 변수를 만들 때 범위가 {}
     // const는 재선언 재할당 불가능 범위가 {}
     var em = $('#form-email').val();
