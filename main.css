@@ -51,13 +51,21 @@
 
 }
 
+.rn {
+  position: fixed;
+  width: 40px;
+  top: 96%;
+  margin-left: 0px;
+  z-index: 5;
+  transition: all 0.5s;
+}
+
 .nav-black {
   background: white;
   color: black;
 }
 
 .nav-sub {
-  
   display: none;
 }
 
@@ -82,16 +90,17 @@
   padding: 20px;
   margin: 30px auto;
   border-radius: 10px;
+  top: 50px;
   position: fixed;
 }
 .left-menu {
   width: 150px;
   height: 100%;
-  background: white;
   font-size: 20px;
   color:white;
   position: fixed;
   margin-left: -150px;
+  z-index: 5;
 }
 
 .slide-container {
@@ -166,4 +175,9 @@ ul.list {
   .show {
 	display: block;
   transition: all 1s;
+  }
+
+  .size-select {
+    display: block;
+    transition: all 1s;
   }
