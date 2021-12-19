@@ -73,7 +73,6 @@
     JS로도 할 수있지만 코드가 길고 난잡해져서 보통 JQUERY 라이브러리를 사용함
 
     서버 : 접속자가 요청을 하면 데이터를 갖다줌
-    요청 :  
     GET : URL을 입력해서 요청함(읽기)
     POST : 숨겨서 정보를 전달하거나 요청함 (쓰기)
    -->
@@ -99,7 +98,7 @@
       $.ajax({ 
       url: '',
       type : 'GET'
-    }).done(function(url) { //데이터 가져오는 함수
+    }).done(function(url) { //ajxa 요청 성공시 실행할 코드
       $('#hello').html(url);
     }).fail(function() { //ajax 요청 실패시 실행할 코드
 
