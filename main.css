@@ -181,3 +181,51 @@ ul.list {
     display: block;
     transition: all 1s;
   }
+
+  .grys {
+    background:lightgrey;
+    height: 2000px;
+    margin-top: 500px;
+  }
+
+  .imgs {
+    float: right;
+    width: 400px;
+    position: sticky;
+    top: 200px;
+    transition: all 1s;
+  }
+
+  .tes {
+    float: left;
+    width: 500px;
+  }
+  .tes2 {
+    float: left;
+    margin-top: 300px;
+    width: 500px;
+  }
+  
+  .card-background {
+    height: 3000px; 
+    margin-top : 800px;
+    margin-bottom: 1600px;
+  }
+
+  .card-box img {
+    display: block;
+    margin: auto;
+    max-width: 60%;
+  }
+
+  .card-box {
+    position: sticky;
+    top: 300px;
+    margin-top: 200px;
+  }
+
+  .sound {
+    position: fixed;
+    top: 10%;
+    left: 38%;
+  }
