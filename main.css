@@ -222,10 +222,12 @@ ul.list {
     position: sticky;
     top: 300px;
     margin-top: 200px;
+    transition : all 0.1s;
   }
 
   .sound {
     position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: 10%;
-    left: 38%;
   }
